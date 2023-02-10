@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    Our Product page
+  </title>
+  <style>
+    body {
+      background: linear-gradient(to top, orange 50%, white 50%)no-repeat;
+      margin: 0%;
+      padding: 0%;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+    }
+    .img {
+      margin: 10px;
+    }
+
+    .footer {
+      width: 100%;
+      height: 80px;
+      background-color: rgb(43, 42, 42);
+      color: white;
+      text-align: center;
+    }
+
+
+    /** LIGHTBOX MARKUP  target **/
+
+    /* .lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.8);
+} */
+
+    /* Unhide the lightbox when it's the target */
+
+
+    /* .lightbox:target {
+  display: block;
+} */
+
+    /* .lightbox span {
+  display: block;
+  width: 100%;
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+} */
+    .lightbox:focus img {
+      position: absolute;
+      object-fit: cover;
+      align-items: center;
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div style="text-align:center">
+    <h1>Our protfolio</h1>
+  </div>
+
+  <div class="row">
+    <a href="javascript:(0)" class="lightbox">
+      <img src="1_2.jpg" alt="Puff" width="300" height="250" class="img"></a>
+    <a href="javascript:(0)" class="lightbox">
+      <img src="1_1.jpg" alt="Puff" width="300" height="250" class="img"></a>
+    <a href="javascript:(0)" class="lightbox">
+      <img src="1_3.jpg" alt="Puff" width="300" height="250" class="img"></a>
+  </div>
+
+  <div class="row">
+    <a href="javascript:(0)" class="lightbox">
+      <img src="bread1.jpg" alt="Bread" width="300" height="250" class="img"></a>
+    <a href="javascript:(0)" class="lightbox">
+      <img src="bread2.jpg" alt="Bread" width="300" height="250" class="img"></a>
+    <a href="javascript:(0)" class="lightbox">
+      <img src="bread3.jpg" alt="Bread" width="300" height="250" class="img"></a>
+  </div>
+
+  <div class="row">
+    <a href="javascript:(0)" class="lightbox">
+      <img src="donuts1.jpg" alt="Donuts" width="300" height="250" class="img"></a>
+    <a href="javascript:(0)" class="lightbox">
+      <img src="donuts2.jpg" alt="Donuts" width="300" height="250" class="img"></a>
+    <a href="javascript:(0)" class="lightbox">
+      <img src="donuts3.jpg" alt="Donuts" width="300" height="250" class="img"></a>
+  </div>
+
+  <!-- lightbox container hidden with CSS -->
+  <!-- <a href class="lightbox">
+    <img src="1_1.jpg">
+  </a> -->
+  <!-- <a href="#" class="lightbox" id="img1">
+  <span style="background-image: url('1_1.jpg')"></span>
+</a> -->
+
+
+  <div style="text-align:center">
+    <h6><i>Images from <u>freepik</u></i></h6>
+  </div>
+  <div class="footer">
+    @Copyright <i>Webpage created by <u>vraj shah</u></i>
+  </div>
+  </div>
+</body>
+
+</html>
