@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
@@ -19,7 +19,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     font-size: 10px;
   }
 }
-input[type=text], select, textarea {
+input[type=text],input[type=email], select, textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -49,33 +49,41 @@ input[type=submit]:hover {
   background-color: #f2f2f2;
   padding: 20px;
 }
+
 </style>
-</head>
-<body>
+  </head>
+  <body>
 
-<h2 style="color:#4a90e2; text-align: center;">Contact Form</h2>
-<div class="container">
-  <form action="/action_page.php">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+    <h2 style="color:#4a90e2; text-align: center;">Contact Form</h2>
+    <div class="container">
+      <form name="contact" onsubmit="return validate()" action="index.html"
+        method="post">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" placeholder="Your name.."
+          required>
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname"
+          placeholder="Your Last name.." required>
 
-    <label for="food">Food Item</label>
-    <select id="food" name="food"> 
-      <option value="none" selected disabled hidden>Select an Option</option> 
-      <option value="puff">Puff</option>
-      <option value="cake">Cake</option>
-      <option value="donuts">Donuts</option>
-      <option value="bread">Bread</option>
-    </select>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email"
+          placeholder="Your Email Id.." required>
 
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something..!!!" style="height:200px"></textarea>
-    <input type="submit" value="Submit">
-  </form>
-</div>
+        <label for="food">Food Item</label>
+        <select name="food" id="food" required>
+          <option value="">None</option>
+          <option value="puff">Puff</option>
+          <option value="cake">Cake</option>
+          <option value="donuts">Donuts</option>
+          <option value="bread">Bread</option>
+        </select>
 
-</body>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something..!!!"
+          style="height:200px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </body>
 </html>

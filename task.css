@@ -16,7 +16,9 @@ body{
 .navbar {
   overflow: hidden;
   background-color: #333;
+  position: relative;
   }
+  
 
   .navbar a {
   float:left;
@@ -77,6 +79,44 @@ body{
   .locationheder{
     display: flex;
   }
+
+  /* dropdown button */
+  /* set the size and position of button on web */
+
+  .navbutton {
+    background:inherit;
+    font-family: inherit;
+    color:white;
+    padding: 10px 22px;
+    font-size: 15px;
+    border: none;
+    z-index: 1;
+ }
+
+ .navbutton:hover {
+    background: rgb(95, 94, 94);
+ }
+
+ /* provide css to background of list items */
+
+ #list-items {
+    display: none;
+    position: relative;
+    background-color: white;
+    width: 156.5px;
+ }
+
+ /* provide css to list items */
+
+ #list-items a {
+    display: block;
+    font-size: 15px;
+    background-color: rgb(60, 59, 59);
+    color:white;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+ }
 /* protfolio */
 
 .port {
@@ -205,6 +245,74 @@ font-size: 20px;
 margin-right: 15px;
 }
 
+
+/* testi slider */
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.testi {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
 /* footer */
 
 .footer { 
@@ -303,5 +411,86 @@ color:#FFFFFF;
 .s-box:hover .bar{
 display: block;
 }
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fd0707;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #131313;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* search bar for blog */
+
+#myInput {
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 90%;
+  align-items: center;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #121212;
+  margin-bottom: 12px;
+}
+/* hamburger */
+.navbar #myLinks {
+  display: none;
+}
+
+.navbar a {
+  float: left;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a.icon {
+  float: right;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #272928;
+  color: white;
+}
+
 
 

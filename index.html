@@ -20,60 +20,79 @@
     </head>
     <body>
         <header>
-            <div class="navbar">
-                <a href="#protfolio">Home</a>
-                <a href="#teammember">Team Member</a>
-                <div class="dropdown">
-                    <button class="dropbtn">Blog
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="blog.html">Create blog</a>
+            <div class="mobile-container">
+                <div class="navbar">
+                    <div id="myLinks">
+                        <a href="#protfolio">Home</a>
+                        <a href="#teammember">Team Member</a>
+                        <div class="dropdown">
+                            <button onclick="show_hide()" class="navbutton">Blog</button>
+                            <div id="list-items">
+                                <a href="blog.html">Create blog</a>
+                            </div>
+                        </div>
+                        <a href="#services">Servies</a>
+                        <a href="#location">Location</a>
+                        <a href="#Testi">Reviews</a>
+                        <a href="contact.html">Contact</a>
+                        <div class="dropdown">
+                            <button class="dropbtn">About
+                            </button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="#">Company Profile</a>
+                                <a href="#">Guide Profile</a>
+                                <a href="#">Rules & Regulation</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <a href="#services">Servies</a>
-                <a href="#location">Location</a>
-                <a href="#Testi">Reviews</a>
-                <a href="contact.html">Contact</a>
-                <div class="dropdown">
-                    <button class="dropbtn">About
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="#">Company Profile</a>
-                        <a href="#">Guide Profile</a>
-                        <a href="#">Rules & Regulation</a>
-                    </div>
+                    <a href="javascript:void(0);" class="icon"
+                        onclick="hamburger()">
+                        <i class="fa fa-bars"></i>
+                    </a>
                 </div>
             </div>
         </header>
         <main>
             <h2 style="color:#4a90e2; text-align: center;">Hello SKEY</h2>
-            <!-- <img src="1_1.jpg" alt="puff" style="align-items: center;"> -->
             <section class="protfolio" id="protfolio">
                 <h1 style="text-align:center;background-color: #4a90e2;">Our
                     Protfolio item</h1>
                 <div class="port">
-                    <a href="product.html"><img src="1_2.jpg" alt="Puff"
+                    <a href="product.html"><img src="img/1_2.jpg" alt="Puff"
                             width="300" height="250" class="img">
-                        <img src="1_1.jpg" alt="Puff" width="300" height="250"
+                        <img src="img/1_1.jpg" alt="Puff" width="300"
+                            height="250"
                             class="img">
-                        <img src="1_3.jpg" alt="Puff" width="300" height="250"
+                        <img src="img/1_3.jpg" alt="Puff" width="300"
+                            height="250"
                             class="img"></a>
                 </div>
             </section>
             <section class="blog" id="blog">
                 <h1 style="text-align:center;background-color: #4a90e2;">Blog</h1>
+                <input type="text" id="myInput" onkeyup="search()"
+                    placeholder="Search By Words" title="Search">
                 <div class="row">
                     <div class="card">
-                        <img src="bread2.jpg" alt="bread" style="width:100%;">
-                        <p>A bread proofing basket forms an integral part of a
+                        <img src="img/bread2.jpg" alt="bread"
+                            style="width:100%;">
+                        <p id="search">A bread proofing basket forms an
+                            integral
+                            part of a
                             baker’s tools and are used to shape the dough
-                            appropriately while proofing which is an essential
-                            step to activate the yeast. These special baskets
-                            are made of different materials including cane, wood
-                            fiber, rattan, wicker and even terracotta. Baskets
-                            made of rattan cane are particularly recommended for
+                            appropriately while proofing which is an
+                            essential
+                            step to activate the yeast. These special
+                            baskets
+                            are made of different materials including cane,
+                            wood
+                            fiber, rattan, wicker and even terracotta.
+                            Baskets
+                            made of rattan cane are particularly recommended
+                            for
                             those trying their hands on professional bread
-                            baking. Bakers love these as they form an attractive
+                            baking. Bakers love these as they form an
+                            attractive
                             spiral print on the crust and also facilitate
                             hassle-free proofing.</p>
                         <div style="margin: 24px 0;">
@@ -87,16 +106,25 @@
                     </div>
 
                     <div class="card">
-                        <img src="blog.jpg" alt="blog" style="width:100%;">
-                        <p>A bread proofing basket forms an integral part of a
+                        <img src="img/blog.jpg" alt="blog"
+                            style="width:100%;">
+                        <p id="search">A bread proofing basket forms an
+                            integral
+                            part of a
                             baker’s tools and are used to shape the dough
-                            appropriately while proofing which is an essential
-                            step to activate the yeast. These special baskets
-                            are made of different materials including cane, wood
-                            fiber, rattan, wicker and even terracotta. Baskets
-                            made of rattan cane are particularly recommended for
+                            appropriately while proofing which is an
+                            essential
+                            step to activate the yeast. These special
+                            baskets
+                            are made of different materials including cane,
+                            wood
+                            fiber, rattan, wicker and even terracotta.
+                            Baskets
+                            made of rattan cane are particularly recommended
+                            for
                             those trying their hands on professional bread
-                            baking. Bakers love these as they form an attractive
+                            baking. Bakers love these as they form an
+                            attractive
                             spiral print on the crust and also facilitate
                             hassle-free proofing.</p>
                         <div style="margin: 24px 0;">
@@ -109,17 +137,24 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="blog2.jpg" alt="blog" style="width:100%;">
-                        <p>Sugar paste is a popular, edible and versatile icing
+                        <img src="img/blog2.jpg" alt="blog"
+                            style="width:100%;">
+                        <p id="search">Sugar paste is a popular, edible and
+                            versatile icing
                             chiefly used in the decoration of cakes and
-                            pastries. In addition to it being delicious, another
-                            reason why this paste is so well-liked is that it
-                            can be moulded, modelled, shaped, smoothed and very
-                            easily rolled out. The ingredients typically include
+                            pastries. In addition to it being delicious,
+                            another
+                            reason why this paste is so well-liked is that
+                            it
+                            can be moulded, modelled, shaped, smoothed and
+                            very
+                            easily rolled out. The ingredients typically
+                            include
                             icing sugar, glycerine, corn syrup, water and
                             gelatine heated and cooled to create a paste of
                             dough-like consistency.Magiculata, Satin ice,
-                            Confect, Vizyon and Tropolite are a few examples of
+                            Confect, Vizyon and Tropolite are a few examples
+                            of
                             brands in India that sell sugar paste.</p>
                         <div style="margin: 24px 0;">
                             <a href="https://twitter.com/"><i class="fa
@@ -137,7 +172,8 @@
                     Memebers</h1>
                 <div class="row">
                     <div class="card">
-                        <img src="women.jpg" alt="Jane" style="width:100%">
+                        <img src="img/women.jpg" alt="Jane"
+                            style="width:100%">
                         <h2>Jane Doe</h2>
                         <p class="title">CEO & Founder</p>
                         <p>jane_doe@gmail.com</p>
@@ -145,7 +181,8 @@
                     </div>
 
                     <div class="card">
-                        <img src="women.jpg" alt="Mike" style="width:100%">
+                        <img src="img/women.jpg" alt="Mike"
+                            style="width:100%">
                         <h2>Mike Ross</h2>
                         <p class="title">CMO</p>
                         <p>Mike@yahoo.com</p>
@@ -153,7 +190,8 @@
                     </div>
 
                     <div class="card">
-                        <img src="men.jpg" alt="John" style="width:100%">
+                        <img src="img/men.jpg" alt="John"
+                            style="width:100%">
                         <h2>John Doe</h2>
                         <p class="title">CSO</p>
                         <p>john@gmail.com</p>
@@ -162,10 +200,11 @@
                 </div>
             </section>
 
-            <section class="Testi" id="Testi">
+            <div class="slideshow-container">
                 <h1 style="text-align:center;background-color: #4a90e2;">Testimonial</h1>
                 <div class="testi">
-                    <img src="women.jpg" alt="Avatar" style="width:90px">
+                    <img src="img/women.jpg" alt="Avatar"
+                        style="width:90px">
                     <span class="rating">john</span>
                     <br><br>
                     <span class="fa fa-star checked"></span>
@@ -173,14 +212,15 @@
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star"></span><br><br><hr
-                        style="border-color: rgb(124, 115, 156);border-style:
+                        style="border-color: rgb(124, 115,
+                        156);border-style:
                         solid;">
                     <p style="border-style: outset">Good Product with Good
                         Hygiene</p>
                 </div>
 
                 <div class="testi">
-                    <img src="men.jpg" alt="Avatar" style="width:90px">
+                    <img src="img/men.jpg" alt="Avatar" style="width:90px">
                     <span class="rating">Smith</span>
                     <br><br>
                     <span class="fa fa-star checked"></span>
@@ -188,41 +228,83 @@
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star"></span>
                     <span class="fa fa-star"></span><br><br><hr
-                        style="border-color: rgb(124, 115, 156);border-style:
+                        style="border-color: rgb(124, 115,
+                        156);border-style:
                         solid;border-width: 1px;">
-                    <p style="border-style: outset">My hole experience has been
+                    <p style="border-style: outset">My hole experience has
+                        been
                         amazing.The Staff was so polite and caring.</p>
                 </div>
-            </section>
 
+                <div class="testi">
+                    <img src="img/women2.jpg" alt="Avatar"
+                        style="width:90px"><br><br><br>
+                    <span class="rating">Lena</span>
+                    <br><br>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span><br><br><hr
+                        style="border-color: rgb(124, 115,
+                        156);border-style:
+                        solid;">
+                    <p style="border-style: outset">Good Puff Quality</p>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+            <!-- ------------------------------------------------------------------>
             <section id="location">
                 <div class="locationheder">
                     <div class="location">
                         <h1 style="text-align:center;background-color:
                             #4a90e2;">Our Location</h1>
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.304064394286!2d72.52210691419553!3d23.012605322477015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85310732d9ad%3A0x40d8c324e10e363a!2sShubhKey%20Infotech!5e0!3m2!1sen!2sin!4v1675752903800!5m2!1sen!2sin"
-                            width="400" height="300" style="border:0;"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3115689258616!2d73.87774911468829!3d18.514817287412335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c04f2a978d45%3A0x386bee1e06d701ac!2sKayani%20Bakery!5e0!3m2!1sen!2sin!4v1676209412976!5m2!1sen!2sin"
+                            width="600" height="300" style="border:0;"
                             allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div id="slidshow">
                         <div id="slidebox">
                             <div class="slideing">
-                                <img src="1_1.jpg" alt="" class="slideing" />
-                                <img src="donuts1.jpg" alt="" class="slideing"
+                                <img src="img/1_1.jpg" alt=""
+                                    class="slideing"
                                     />
-                                <img src="bread1.jpg" alt="" class="slideing" />
-                                <img src="donuts3.jpg" alt="" class="slideing"
+                                <img src="img/donuts1.jpg" alt=""
+                                    class="slideing"
                                     />
-                                <img src="1_3.jpg" alt="" class="slideing" />
-                                <img src="1_1.jpg" alt="" class="slideing" />
-                                <img src="donuts1.jpg" alt="" class="slideing"
+                                <img src="img/bread1.jpg" alt=""
+                                    class="slideing" />
+                                <img src="img/donuts3.jpg" alt=""
+                                    class="slideing"
                                     />
-                                <img src="bread1.jpg" alt="" class="slideing" />
-                                <img src="donuts3.jpg" alt="" class="slideing"
+                                <img src="img/1_3.jpg" alt=""
+                                    class="slideing"
                                     />
-                                <img src="1_3.jpg" alt="" class="slideing" />
+
+                                <img src="img/1_1.jpg" alt=""
+                                    class="slideing"
+                                    />
+                                <img src="img/donuts1.jpg" alt=""
+                                    class="slideing"
+                                    />
+                                <img src="img/bread1.jpg" alt=""
+                                    class="slideing" />
+                                <img src="img/donuts3.jpg" alt=""
+                                    class="slideing"
+                                    />
+                                <img src="img/1_3.jpg" alt=""
+                                    class="slideing"
+                                    />
+
                             </div>
                         </div>
                     </div>
@@ -241,29 +323,39 @@
                     <div class="s-box-container">
                         <!-- card1 -->
                         <div class="s-box">
-                            <img alt="1" src="1_2.jpg" />
+                            <img alt="1" src="img/1_2.jpg" />
                             <h1>Puff</h1>
                             <p>Good Food = Good Mood</p>
-                            <a class="s-btn" href="#">More</a>
+                            <a class="s-btn" id="moredetail" href="#">More</a>
+                            <div id="myModal" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <p>We Serving Puff,Bread,Dounts Every
+                                        Day
+                                        With Good Quality and Hygiene..</p>
+                                </div>
+                            </div>
                         </div>
                         <!-- card2	 -->
                         <div class="s-box">
-                            <img alt="2" src="bread2.jpg" />
+                            <img alt="2" src="img/bread2.jpg" />
                             <h1>Bread</h1>
                             <p>happiness is the small of fresh backed bread</p>
-                            <a class="s-btn" href="#">More</a>
+                            <a class="s-btn" id="moredetail" href="#">More</a>
                         </div>
                         <!-- card3 -->
                         <div class="s-box">
-                            <img alt="3" src="donuts2.jpg" />
+                            <img alt="3" src="img/donuts2.jpg" />
                             <h1>dounts</h1>
                             <p>All you need is love and donuts</p>
-                            <a class="s-btn" href="#">More</a>
+                            <a class="s-btn" id="moredetail" href="#">More</a>
                         </div>
                     </div>
                 </section>
             </div>
         </main>
+        <script src="index.js"></script>
     </body>
 
 </html>

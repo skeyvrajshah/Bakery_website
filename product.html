@@ -7,7 +7,10 @@
     Our Product page
   </title>
   <style>
-    body {
+
+    /* light box with focus */
+
+    /* body {
       background: linear-gradient(to top, orange 50%, white 50%)no-repeat;
       margin: 0%;
       padding: 0%;
@@ -28,7 +31,14 @@
       color: white;
       text-align: center;
     }
-
+    .lightbox:focus img {
+      position: absolute;
+      object-fit: cover;
+      align-items: center;
+      width: 300px;
+      height: 300px;
+    }
+ */
 
     /** LIGHTBOX MARKUP  target **/
 
@@ -59,12 +69,54 @@
   background-repeat: no-repeat;
   background-size: contain;
 } */
-    .lightbox:focus img {
-      position: absolute;
-      object-fit: cover;
-      align-items: center;
-      width: 300px;
-      height: 300px;
+body{
+  background: linear-gradient(to top, orange 50%, white 50%)no-repeat;
+  margin: 0;
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3,200px);
+  justify-content: center ;
+  align-items: center;
+  grid-gap: 10px;
+  height: 85vh;
+}
+.grid img{
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+/* bg show */
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  display: none;
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* whiteline */
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  padding: 4px;
+  background-color: black;
+  border: 2px solid white;
+}
+
+.footer {
+      width: 100%;
+      height: 60px;
+      background-color: rgb(43, 42, 42);
+      color: white;
+      text-align: center;
     }
   </style>
 </head>
@@ -75,42 +127,44 @@
     <h1>Our protfolio</h1>
   </div>
 
-  <div class="row">
+  <!-- <div class="row">
     <a href="javascript:(0)" class="lightbox">
-      <img src="1_2.jpg" alt="Puff" width="300" height="250" class="img"></a>
+      <img src="img/1_2.jpg" alt="Puff" width="300" height="250" class="img"></a>
     <a href="javascript:(0)" class="lightbox">
-      <img src="1_1.jpg" alt="Puff" width="300" height="250" class="img"></a>
+      <img src="img/1_1.jpg" alt="Puff" width="300" height="250" class="img"></a>
     <a href="javascript:(0)" class="lightbox">
-      <img src="1_3.jpg" alt="Puff" width="300" height="250" class="img"></a>
+      <img src="img/1_3.jpg" alt="Puff" width="300" height="250" class="img"></a>
   </div>
 
   <div class="row">
     <a href="javascript:(0)" class="lightbox">
-      <img src="bread1.jpg" alt="Bread" width="300" height="250" class="img"></a>
+      <img src="img/bread1.jpg" alt="Bread" width="300" height="250" class="img"></a>
     <a href="javascript:(0)" class="lightbox">
-      <img src="bread2.jpg" alt="Bread" width="300" height="250" class="img"></a>
+      <img src="img/bread3.jpg" alt="Bread" width="300" height="250" class="img"></a>
     <a href="javascript:(0)" class="lightbox">
-      <img src="bread3.jpg" alt="Bread" width="300" height="250" class="img"></a>
+      <img src="img/bread2.jpg" alt="Bread" width="300" height="250" class="img"></a>
   </div>
 
   <div class="row">
     <a href="javascript:(0)" class="lightbox">
-      <img src="donuts1.jpg" alt="Donuts" width="300" height="250" class="img"></a>
+      <img src="img/donuts1.jpg" alt="Donuts" width="300" height="250" class="img"></a>
     <a href="javascript:(0)" class="lightbox">
-      <img src="donuts2.jpg" alt="Donuts" width="300" height="250" class="img"></a>
+      <img src="img/donuts3.jpg" alt="Donuts" width="300" height="250" class="img"></a>
     <a href="javascript:(0)" class="lightbox">
-      <img src="donuts3.jpg" alt="Donuts" width="300" height="250" class="img"></a>
+      <img src="img/donuts2.jpg" alt="Donuts" width="300" height="250" class="img"></a>
+  </div> -->
+
+  <div class="grid">
+    <img src="img/1_2.jpg">
+    <img src="img/1_1.jpg">
+    <img src="img/1_3.jpg">
+    <img src="img/bread1.jpg">
+    <img src="img/bread3.jpg">
+    <img src="img/bread2.jpg">
+    <img src="img/donuts1.jpg" >
+    <img src="img/donuts3.jpg" >
+    <img src="img/donuts2.jpg" >
   </div>
-
-  <!-- lightbox container hidden with CSS -->
-  <!-- <a href class="lightbox">
-    <img src="1_1.jpg">
-  </a> -->
-  <!-- <a href="#" class="lightbox" id="img1">
-  <span style="background-image: url('1_1.jpg')"></span>
-</a> -->
-
-
   <div style="text-align:center">
     <h6><i>Images from <u>freepik</u></i></h6>
   </div>
@@ -118,6 +172,28 @@
     @Copyright <i>Webpage created by <u>vraj shah</u></i>
   </div>
   </div>
-</body>
+  <script>
+    const lightbox = document.createElement("div");
+lightbox.id = "lightbox";
+document.body.appendChild(lightbox);
 
+const images = document.querySelectorAll("img");
+images.forEach((image) => {
+  image.addEventListener("click", (e) => {
+    lightbox.classList.add("active");
+    const img = document.createElement("img");
+    img.src = image.src;
+    while (lightbox.firstChild) {
+      lightbox.removeChild(lightbox.firstChild);
+    }
+    lightbox.appendChild(img);
+  });
+});
+
+lightbox.addEventListener("click", (e) => {
+  if (e.target !== e.currentTarget) return;
+  lightbox.classList.remove("active");
+});
+  </script> 
+</body>
 </html>
