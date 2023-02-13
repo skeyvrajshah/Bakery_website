@@ -1,6 +1,7 @@
 body{
   margin: 0%;
   padding : 0%;
+  /* background:linear-gradient(270deg,#fefdfd 30%,#0a0a0a) #080808; */
 }
 @media only screen and(min-width: 601px) {
 .main {
@@ -16,10 +17,8 @@ body{
 .navbar {
   overflow: hidden;
   background-color: #333;
-  position: relative;
   }
   
-
   .navbar a {
   float:left;
   font-size: 16px;
@@ -35,6 +34,7 @@ body{
   }
 
   .dropdown .dropbtn {
+  cursor: pointer;
   font-size: 16px;  
   border: none;
   outline: none;
@@ -46,9 +46,10 @@ body{
   }
 
   /* bgcolor on hover */
-  .navbar a:hover, .dropdown:hover .dropbtn {
+  .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
   background-color: rgb(55, 55, 55);
   }
+
 
   .dropdown-content {
   display: none;
@@ -68,55 +69,58 @@ body{
   text-align: left;
   }
 
-  .dropdown-content a:hover {
-  background-color: #ddd;
-  }
-
-  .dropdown:hover .dropdown-content {
-  display: block;
-  }
-
-  .locationheder{
-    display: flex;
-  }
-
-  /* dropdown button */
-  /* set the size and position of button on web */
-
-  .navbutton {
-    background:inherit;
-    font-family: inherit;
-    color:white;
-    padding: 10px 22px;
-    font-size: 15px;
-    border: none;
-    z-index: 1;
- }
-
- .navbutton:hover {
-    background: rgb(95, 94, 94);
- }
-
- /* provide css to background of list items */
-
- #list-items {
-    display: none;
-    position: relative;
-    background-color: white;
-    width: 156.5px;
- }
-
- /* provide css to list items */
-
- #list-items a {
+  .show {
     display: block;
-    font-size: 15px;
-    background-color: rgb(60, 59, 59);
-    color:white;
+  }
+
+  /* dropdown hover */
+  .dropdownn {
+    float: left;
+    overflow: hidden;
+    }
+  
+    .dropdownn .dropbtnn {
+    cursor: pointer;
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    }
+  
+    .dropdown-contentt {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 0;
+    }
+  
+    .dropdown-contentt a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
     text-decoration: none;
-    padding: 10px;
-    text-align: center;
- }
+    display: block;
+    text-align: left;
+    }
+  
+  .dropdown-contentt a:hover {
+    background-color: #ddd;
+    }
+  
+    .dropdownn:hover .dropdown-contentt {
+    display: block;
+    }
+  
+    .locationheder{
+      display: flex;
+    }
+    
 /* protfolio */
 
 .port {
@@ -466,7 +470,7 @@ display: block;
   margin-bottom: 12px;
 }
 /* hamburger */
-.navbar #myLinks {
+/* .navbar #myLinks {
   display: none;
 }
 
@@ -490,7 +494,134 @@ display: block;
 .active {
   background-color: #272928;
   color: white;
+} */
+
+
+/* tab animation */
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: inherit;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #3f3e3e;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #292929;
+  border-top: none;
+}
+
+/* hamburger */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #3d3d3d;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2a2b2a;
+  color: rgb(44, 43, 43);
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
 
 
+/* sticky header */
 
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1;
+}
+
+/* Accordion */
+.accordion-content {
+  display: none;
+}
+
+
+/* scroll up */
+#topbtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(9, 9, 9);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#topbtn:hover {
+  background-color: #3f3f3f;
+}

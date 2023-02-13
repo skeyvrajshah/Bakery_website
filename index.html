@@ -19,34 +19,33 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <header>
-            <div class="mobile-container">
+        <header id="header">
+            <div class="topnav" id="myTopnav">
                 <div class="navbar">
-                    <div id="myLinks">
-                        <a href="#protfolio">Home</a>
-                        <a href="#teammember">Team Member</a>
-                        <div class="dropdown">
-                            <button onclick="show_hide()" class="navbutton">Blog</button>
-                            <div id="list-items">
-                                <a href="blog.html">Create blog</a>
-                            </div>
-                        </div>
-                        <a href="#services">Servies</a>
-                        <a href="#location">Location</a>
-                        <a href="#Testi">Reviews</a>
-                        <a href="contact.html">Contact</a>
-                        <div class="dropdown">
-                            <button class="dropbtn">About
-                            </button>
-                            <div id="myDropdown" class="dropdown-content">
-                                <a href="#">Company Profile</a>
-                                <a href="#">Guide Profile</a>
-                                <a href="#">Rules & Regulation</a>
-                            </div>
+                    <a href="#protfolio">Home</a>
+                    <a href="#teammember">Team Member</a>
+                    <div class="dropdown">
+                        <button class="dropbtn" onclick="dropbutton()">Blog  <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content" id="myDropdown">
+                            <a href="blog.html">Create blog</a>
                         </div>
                     </div>
-                    <a href="javascript:void(0);" class="icon"
-                        onclick="hamburger()">
+                    <a href="#services">Servies</a>
+                    <a href="#location">Location</a>
+                    <a href="#Testi">Reviews</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="#FAQ">FAQ</a>
+                    <div class="dropdownn">
+                        <button class="dropbtnn">About
+                        </button>
+                        <div class="dropdown-contentt">
+                            <a href="#">Company Profile</a>
+                            <a href="#">Guide Profile</a>
+                            <a href="#">Rules & Regulation</a>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="hamburger()">
                         <i class="fa fa-bars"></i>
                     </a>
                 </div>
@@ -70,134 +69,170 @@
             </section>
             <section class="blog" id="blog">
                 <h1 style="text-align:center;background-color: #4a90e2;">Blog</h1>
-                <input type="text" id="myInput" onkeyup="search()"
-                    placeholder="Search By Words" title="Search">
-                <div class="row">
-                    <div class="card">
-                        <img src="img/bread2.jpg" alt="bread"
-                            style="width:100%;">
-                        <p id="search">A bread proofing basket forms an
-                            integral
-                            part of a
-                            baker’s tools and are used to shape the dough
-                            appropriately while proofing which is an
-                            essential
-                            step to activate the yeast. These special
-                            baskets
-                            are made of different materials including cane,
-                            wood
-                            fiber, rattan, wicker and even terracotta.
-                            Baskets
-                            made of rattan cane are particularly recommended
-                            for
-                            those trying their hands on professional bread
-                            baking. Bakers love these as they form an
-                            attractive
-                            spiral print on the crust and also facilitate
-                            hassle-free proofing.</p>
-                        <div style="margin: 24px 0;">
-                            <a href="https://twitter.com/"><i class="fa
-                                    fa-twitter"></i></a>
-                            <a href="https://www.linkedin.com/"><i class="fa
-                                    fa-linkedin"></i></a>
-                            <a href="https://www.facebook.com/"><i class="fa
-                                    fa-facebook"></i></a>
-                        </div>
+                 <input type="text" id="search-inp" placeholder="Search posts">
+                <button id="search-button">Search</button>
+                <ul id="posts">
+                    <div class="row">
+                        <li class="post">
+                            <div class="card">
+                                <img src="img/bread2.jpg" alt="bread"
+                                    style="width:100%;">
+                                <p id="search">A bread proofing basket forms an
+                                    integral
+                                    part of a
+                                    baker’s tools and are used to shape the dough
+                                    appropriately while proofing which is an
+                                    essential
+                                    step to activate the yeast. These special
+                                    baskets
+                                    are made of different materials including cane,
+                                    wood
+                                    fiber, rattan, wicker and even terracotta.
+                                    Baskets
+                                    made of rattan cane are particularly recommended
+                                    for
+                                    those trying their hands on professional bread
+                                    baking. Bakers love these as they form an
+                                    attractive
+                                    spiral print on the crust and also facilitate
+                                    hassle-free proofing.</p>
+                                <div style="margin: 24px 0;">
+                                    <a href="https://twitter.com/"><i class="fa
+                                            fa-twitter"></i></a>
+                                    <a href="https://www.linkedin.com/"><i class="fa
+                                            fa-linkedin"></i></a>
+                                    <a href="https://www.facebook.com/"><i class="fa
+                                            fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="post">
+                            <div class="card">
+                                <img src="img/blog.jpg" alt="blog"
+                                    style="width:100%;">
+                                <p id="search">A bread proofing basket forms an
+                                    integral
+                                    part of a
+                                    baker’s tools and are used to shape the dough
+                                    appropriately while proofing which is an
+                                    essential
+                                    step to activate the yeast. These special
+                                    baskets
+                                    are made of different materials including cane,
+                                    wood
+                                    fiber, rattan, wicker and even terracotta.
+                                    Baskets
+                                    made of rattan cane are particularly recommended
+                                    for
+                                    those trying their hands on professional bread
+                                    baking. Bakers love these as they form an
+                                    attractive
+                                    spiral print on the crust and also facilitate
+                                    hassle-free proofing.</p>
+                                <div style="margin: 24px 0;">
+                                    <a href="https://twitter.com/"><i class="fa
+                                            fa-twitter"></i></a>
+                                    <a href="https://www.linkedin.com/"><i class="fa
+                                            fa-linkedin"></i></a>
+                                    <a href="https://www.facebook.com/"><i class="fa
+                                            fa-facebook"></i></a>
+                                </div>
+                            </div> 
+                        </li>
+                        <li class="post">
+                            <div class="card">
+                                <img src="img/blog2.jpg" alt="blog"
+                                    style="width:100%;">
+                                <p id="search">Sugar paste is a popular, edible and
+                                    versatile icing
+                                    chiefly used in the decoration of cakes and
+                                    pastries. In addition to it being delicious,
+                                    another
+                                    reason why this paste is so well-liked is that
+                                    it
+                                    can be moulded, modelled, shaped, smoothed and
+                                    very
+                                    easily rolled out. The ingredients typically
+                                    include
+                                    icing sugar, glycerine, corn syrup, water and
+                                    gelatine heated and cooled to create a paste of
+                                    dough-like consistency.Magiculata, Satin ice,
+                                    Confect, Vizyon and Tropolite are a few examples
+                                    of
+                                    brands in India that sell sugar paste.</p>
+                                <div style="margin: 24px 0;">
+                                    <a href="https://twitter.com/"><i class="fa
+                                            fa-twitter"></i></a>
+                                    <a href="https://www.linkedin.com/"><i class="fa
+                                            fa-linkedin"></i></a>
+                                    <a href="https://www.facebook.com/"><i class="fa
+                                            fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </li>
                     </div>
 
-                    <div class="card">
-                        <img src="img/blog.jpg" alt="blog"
-                            style="width:100%;">
-                        <p id="search">A bread proofing basket forms an
-                            integral
-                            part of a
-                            baker’s tools and are used to shape the dough
-                            appropriately while proofing which is an
-                            essential
-                            step to activate the yeast. These special
-                            baskets
-                            are made of different materials including cane,
-                            wood
-                            fiber, rattan, wicker and even terracotta.
-                            Baskets
-                            made of rattan cane are particularly recommended
-                            for
-                            those trying their hands on professional bread
-                            baking. Bakers love these as they form an
-                            attractive
-                            spiral print on the crust and also facilitate
-                            hassle-free proofing.</p>
-                        <div style="margin: 24px 0;">
-                            <a href="https://twitter.com/"><i class="fa
-                                    fa-twitter"></i></a>
-                            <a href="https://www.linkedin.com/"><i class="fa
-                                    fa-linkedin"></i></a>
-                            <a href="https://www.facebook.com/"><i class="fa
-                                    fa-facebook"></i></a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="img/blog2.jpg" alt="blog"
-                            style="width:100%;">
-                        <p id="search">Sugar paste is a popular, edible and
-                            versatile icing
-                            chiefly used in the decoration of cakes and
-                            pastries. In addition to it being delicious,
-                            another
-                            reason why this paste is so well-liked is that
-                            it
-                            can be moulded, modelled, shaped, smoothed and
-                            very
-                            easily rolled out. The ingredients typically
-                            include
-                            icing sugar, glycerine, corn syrup, water and
-                            gelatine heated and cooled to create a paste of
-                            dough-like consistency.Magiculata, Satin ice,
-                            Confect, Vizyon and Tropolite are a few examples
-                            of
-                            brands in India that sell sugar paste.</p>
-                        <div style="margin: 24px 0;">
-                            <a href="https://twitter.com/"><i class="fa
-                                    fa-twitter"></i></a>
-                            <a href="https://www.linkedin.com/"><i class="fa
-                                    fa-linkedin"></i></a>
-                            <a href="https://www.facebook.com/"><i class="fa
-                                    fa-facebook"></i></a>
-                        </div>
-                    </div>
-                </div>
+                </ul>
             </section>
             <section class="teammember" id="teammember">
                 <h1 style="text-align:center;background-color: #4a90e2;">Team
                     Memebers</h1>
+                <div class="tab">
+                    <button class="tablinks" onclick="member(event, 'CEO')" title="click to show ceo details">CEO</button>
+                    <button class="tablinks" onclick="member(event, 'CMO')" title="click to show cmo details">CMO</button>
+                    <button class="tablinks" onclick="member(event, 'CSO')" title="click to show cso details">CSO</button>
+                  </div>
                 <div class="row">
-                    <div class="card">
-                        <img src="img/women.jpg" alt="Jane"
-                            style="width:100%">
-                        <h2>Jane Doe</h2>
-                        <p class="title">CEO & Founder</p>
-                        <p>jane_doe@gmail.com</p>
-                        <p><button class="t-btn">Contact</button></p>
+                    <div id="CEO" class="tabcontent">
+                        <div class="card">
+                            <img src="img/women.jpg" alt="Jane"
+                                style="width:100%">
+                            <h2>Jane Doe</h2>
+                            <p class="title">CEO & Founder</p>
+                            <p>jane_doe@gmail.com</p>
+                            <p><button class="t-btn">Contact</button></p>
+                        </div>
+                    </div>
+                    <div id="CMO" class="tabcontent">
+                        <div class="card">
+                            <img src="img/women.jpg" alt="Mike"
+                                style="width:100%">
+                            <h2>Mike Ross</h2>
+                            <p class="title">CMO</p>
+                            <p>Mike@yahoo.com</p>
+                            <p><button class="t-btn">Contact</button></p>
+                        </div>
                     </div>
 
-                    <div class="card">
-                        <img src="img/women.jpg" alt="Mike"
-                            style="width:100%">
-                        <h2>Mike Ross</h2>
-                        <p class="title">CMO</p>
-                        <p>Mike@yahoo.com</p>
-                        <p><button class="t-btn">Contact</button></p>
-                    </div>
-
-                    <div class="card">
-                        <img src="img/men.jpg" alt="John"
-                            style="width:100%">
-                        <h2>John Doe</h2>
-                        <p class="title">CSO</p>
-                        <p>john@gmail.com</p>
-                        <p><button class="t-btn">Contact</button></p>
+                    <div id="CSO" class="tabcontent">
+                        <div class="card">
+                            <img src="img/men.jpg" alt="John"
+                                style="width:100%">
+                            <h2>John Doe</h2>
+                            <p class="title">CSO</p>
+                            <p>john@gmail.com</p>
+                            <p><button class="t-btn">Contact</button></p>
+                        </div>
                     </div>
                 </div>
+            </section>
+
+            <section class="accordion">
+                <h1 style="text-align:center;background-color: #4a90e2;">Accordion</h1>
+            <dl>
+                <button class="accordion-header">Service 1</button>
+                <dd class="accordion-content">
+                  <p>Puff</p>
+                </dd>
+                <button class="accordion-header">Service 2</button>
+                <dd class="accordion-content">
+                  <p>Bread</p>
+                </dd>
+                <button class="accordion-header">Service 3</button>
+                <dd class="accordion-content">
+                  <p>Donuts</p>
+                </dd>
+              </dl>
             </section>
 
             <div class="slideshow-container">
@@ -304,12 +339,47 @@
                                 <img src="img/1_3.jpg" alt=""
                                     class="slideing"
                                     />
-
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+
+            <section id="FAQ">
+                <h1 style="text-align:center;background-color: #4a90e2;">FAQ</h1>
+            <dl>
+                <button class="accordion-header">Puff Avaible Time ?</button>
+                <dd class="accordion-content">
+                    <img src="img/women.jpg" alt="Avatar"
+                        style="width:90px">
+                    <hr style="border-color: rgb(124, 115,
+                        156);border-style:
+                        solid;">
+                    <p style="border-style: outset">Puff Avaiable time 8Am to 6PM</p>
+                </dd>
+                <button class="accordion-header">Shop Opening anf Closing Time ?</button>
+                <dd class="accordion-content">
+                    <img src="img/women.jpg" alt="Avatar"
+                        style="width:90px">
+                    <hr style="border-color: rgb(124, 115,
+                        156);border-style:
+                        solid;">
+                    <p style="border-style: outset">Puff Avaiable time 7Am to 10PM</p>
+                </dd>
+                <button class="accordion-header">Do you make Egeless cakes</button>
+                <dd class="accordion-content">
+                    <img src="img/women.jpg" alt="Avatar"
+                    style="width:90px">
+                <hr style="border-color: rgb(124, 115,
+                    156);border-style:
+                    solid;">
+                <p style="border-style: outset">Yes we make egeless Cakes</p>
+                </dd>
+              </dl>
+            </section>
+
+
+            <button onclick="topFunction()" id="topbtn" title="Go to top">Top</button>
 
             <div class="footer">
                 <section class="services" id="services">
@@ -342,14 +412,28 @@
                             <img alt="2" src="img/bread2.jpg" />
                             <h1>Bread</h1>
                             <p>happiness is the small of fresh backed bread</p>
-                            <a class="s-btn" id="moredetail" href="#">More</a>
+                            <a class="s-btn" id="moredetail1" href="#">More</a>
+                            <div id="myModal1" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <!-- <span class="close">&times;</span> -->
+                                    <p>We Serving Bread</p>
+                                </div>
+                            </div>
                         </div>
                         <!-- card3 -->
                         <div class="s-box">
                             <img alt="3" src="img/donuts2.jpg" />
                             <h1>dounts</h1>
                             <p>All you need is love and donuts</p>
-                            <a class="s-btn" id="moredetail" href="#">More</a>
+                            <a class="s-btn" id="moredetail2" href="#">More</a>
+                            <div id="myModal2" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <!-- <span class="close">&times;</span> -->
+                                    <p>We Serving Puff,Bread,DountsWith Good Quality and Hygiene..</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
