@@ -47,14 +47,15 @@ body{
 
   /* bgcolor on hover */
   .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
-  background-color: rgb(55, 55, 55);
+    background-color: rgb(55, 55, 55); 
+  /* background-color: #4a90e2; */
   }
 
 
   .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #eb0808;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 0;
@@ -142,7 +143,7 @@ body{
 #slidebox{
   align-items: center;
   height: 300px;
-  width: 600px;
+  width: 442px;
   position: relative;
   bottom: 10%;
   top: 30%;
@@ -212,10 +213,7 @@ background-color: #555;
 }
 
 /* testi */
-.rating {
-  font-size: 25px;
-  margin-right: 25px;
-}
+
 
 .fa {
   font-size: 25px;
@@ -615,7 +613,7 @@ display: block;
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: rgb(9, 9, 9);
+  background-color: #000;
   color: white;
   cursor: pointer;
   padding: 15px;
@@ -624,4 +622,35 @@ display: block;
 
 #topbtn:hover {
   background-color: #3f3f3f;
+}
+
+/* faq */
+.faq {
+  font-size: 28px;
+  margin-right: 25px;
+}
+/* carousel */
+.carousel-item {
+  display: none;
+  background-color: white;
+}
+
+.carousel-item.active {
+  display: block;
+  background-color: white;
+
+}
+
+.carousel{
+  display: flex;
+}
+.carousel-control-prev{
+  display: flex;
+  height: 40px;
+}
+
+.carousel-control-next{
+  display: flex;
+  height: 40px;
+
 }

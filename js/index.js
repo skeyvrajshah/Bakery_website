@@ -1,4 +1,4 @@
-alert("Welcome to Home page");
+//alert("Welcome to Home page");
 // navbar dropdown
 function dropbutton() {
   document.getElementById("myDropdown").classList.toggle("show");
@@ -199,3 +199,46 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
+// carousal
+const items = document.querySelectorAll('.carousel-item');
+const prev = document.querySelector('.carousel-control-prev');
+const next = document.querySelector('.carousel-control-next');
+
+let currentIndex = 0;
+
+items[currentIndex].classList.add('active');
+
+prev.addEventListener('click', function() {
+  items[currentIndex].classList.remove('active');
+  currentIndex = (currentIndex - 1 + items.length) % items.length;
+  items[currentIndex].classList.add('active');
+});
+
+next.addEventListener('click', function() {
+  items[currentIndex].classList.remove('active');
+  currentIndex = (currentIndex + 1) % items.length;
+  items[currentIndex].classList.add('active');
+});
+
+
+//heder and footer effect
+const header1 = document.querySelector('.navbar');
+const footer = document.querySelector('.footer');
+
+header1.addEventListener('mouseover', function() {
+  header1.style.backgroundColor = '#4a90e2';
+});
+
+header1.addEventListener('mouseout', function() {
+  header1.style.backgroundColor = '#333';
+});
+
+footer.addEventListener('mouseover', function() {
+  footer.style.backgroundColor = '#4a90e2';
+});
+
+footer.addEventListener('mouseout', function() {
+  footer.style.backgroundColor = '#333';
+});

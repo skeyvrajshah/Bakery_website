@@ -14,7 +14,7 @@
             content="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bakerykart.com%2Fbaking-world-blog&psig=AOvVaw1qV8MzOr4Lshgkpi6bEdlQ&ust=1676005937783000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCICR0f_Wh_0CFQAAAAAdAAAAABAD"
             />
         <meta property="og:keywords" content="Bakery,Puff,Bread,Dounts">
-        <link rel="stylesheet" href="task.css">
+        <link rel="stylesheet" href="css/task.css">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -52,24 +52,42 @@
             </div>
         </header>
         <main>
-            <h2 style="color:#4a90e2; text-align: center;">Hello SKEY</h2>
+            <h2 style="color:#4a90e2; text-align: center; margin-top: 50px;">Hello SKEY</h2>
             <section class="protfolio" id="protfolio">
                 <h1 style="text-align:center;background-color: #4a90e2;">Our
                     Protfolio item</h1>
                 <div class="port">
-                    <a href="product.html"><img src="img/1_2.jpg" alt="Puff"
+                    <!-- <a href="product.html"><img src="img/1_2.jpg" alt="Puff"
                             width="300" height="250" class="img">
                         <img src="img/1_1.jpg" alt="Puff" width="300"
                             height="250"
                             class="img">
                         <img src="img/1_3.jpg" alt="Puff" width="300"
                             height="250"
-                            class="img"></a>
+                            class="img"></a> -->
+                    <div class="carousel">
+                    <a class="carousel-control-prev" href="#"><img src="img/leftt.png"></a>
+                        <div class="carousel-inner">
+                            <a href="product.html">    
+                                <div class="carousel-item">
+                                    <img src="img/1_1.jpg" alt="puff">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/1_2.jpg" alt="puff">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/1_3.jpg" alt="puff">
+                                </div>
+                            </a>
+                        </div>
+                            <!-- <a class="carousel-control-prev" href="#">&lt;</a> -->
+                    <a class="carousel-control-next" href="#"><img src="img/right.png"></a>
+                    </div>
                 </div>
             </section>
             <section class="blog" id="blog">
                 <h1 style="text-align:center;background-color: #4a90e2;">Blog</h1>
-                 <input type="text" id="search-inp" placeholder="Search posts">
+                 <input type="text" id="search-inp" placeholder="Search Blog">
                 <button id="search-button">Search</button>
                 <ul id="posts">
                     <div class="row">
@@ -217,24 +235,29 @@
                 </div>
             </section>
 
+            
             <section class="accordion">
-                <h1 style="text-align:center;background-color: #4a90e2;">Accordion</h1>
-            <dl>
-                <button class="accordion-header">Service 1</button>
-                <dd class="accordion-content">
-                  <p>Puff</p>
-                </dd>
-                <button class="accordion-header">Service 2</button>
-                <dd class="accordion-content">
-                  <p>Bread</p>
-                </dd>
-                <button class="accordion-header">Service 3</button>
-                <dd class="accordion-content">
-                  <p>Donuts</p>
-                </dd>
-              </dl>
+                    <div>
+                        <h1 style="text-align:center;background-color: #4a90e2;">Accordion</h1>
+                        <dl>
+                            <button class="accordion-header">Service 1</button>
+                            <dd class="accordion-content">
+                            <h3>Puff</h3>
+                            <img src="img/1_1.jpg" alt="puff">
+                            </dd>
+                            <button class="accordion-header">Service 2</button>
+                            <dd class="accordion-content">
+                            <h3>Bread</h3>
+                            <img src="img/bread2.jpg" alt="bread">
+                            </dd>
+                            <button class="accordion-header">Service 3</button>
+                            <dd class="accordion-content">
+                            <h3>Donuts</h3>
+                            <img src="img/donuts2.jpg" alt="Donuts">
+                            </dd>
+                        </dl>
             </section>
-
+            <section id="Testi">
             <div class="slideshow-container">
                 <h1 style="text-align:center;background-color: #4a90e2;">Testimonial</h1>
                 <div class="testi">
@@ -294,6 +317,7 @@
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
             </div>
+            </section>
 
             <!-- ------------------------------------------------------------------>
             <section id="location">
@@ -347,41 +371,43 @@
 
             <section id="FAQ">
                 <h1 style="text-align:center;background-color: #4a90e2;">FAQ</h1>
-            <dl>
+            <div>
                 <button class="accordion-header">Puff Avaible Time ?</button>
-                <dd class="accordion-content">
+                <div class="accordion-content">
                     <img src="img/women.jpg" alt="Avatar"
                         style="width:90px">
+                        <span class="faq">Puff Avaible Time ?</span>
                     <hr style="border-color: rgb(124, 115,
                         156);border-style:
                         solid;">
-                    <p style="border-style: outset">Puff Avaiable time 8Am to 6PM</p>
-                </dd>
-                <button class="accordion-header">Shop Opening anf Closing Time ?</button>
-                <dd class="accordion-content">
+                    <p style="border-style: outset">Answer :- Puff Avaiable time 8Am to 6PM</p>
+                </div>
+                <button class="accordion-header">Shop Opening and Closing Time ?</button>
+                <div class="accordion-content">
                     <img src="img/women.jpg" alt="Avatar"
                         style="width:90px">
+                        <span class="faq" style="">Shop Opening and Closing Time ?</span>
                     <hr style="border-color: rgb(124, 115,
                         156);border-style:
                         solid;">
-                    <p style="border-style: outset">Puff Avaiable time 7Am to 10PM</p>
-                </dd>
-                <button class="accordion-header">Do you make Egeless cakes</button>
-                <dd class="accordion-content">
-                    <img src="img/women.jpg" alt="Avatar"
+                    <p style="border-style: outset">Answer :- We Are open to 7Am to 10PM</p>
+                </div>
+                <button class="accordion-header">Do you make Egeless cakes ?</button>
+                <div class="accordion-content">
+                    <img src="img/men.jpg" alt="Avatar"
                     style="width:90px">
+                    <span class="faq">Do you make Egeless cakes ?</span>
                 <hr style="border-color: rgb(124, 115,
                     156);border-style:
                     solid;">
-                <p style="border-style: outset">Yes we make egeless Cakes</p>
-                </dd>
-              </dl>
+                <p style="border-style: outset">Answer :- Yes we make egeless Cakes</p>
+                </div>
+              </div>
             </section>
 
 
-            <button onclick="topFunction()" id="topbtn" title="Go to top">Top</button>
+            <button onclick="topFunction()" id="topbtn" title="Go to top"><img src="img/arrow.png" height="20px" width="20px"></button>
 
-            <div class="footer">
                 <section class="services" id="services">
                     <!--heading---------------->
                     <div class="s-heading">
@@ -437,9 +463,11 @@
                         </div>
                     </div>
                 </section>
-            </div>
+                <div class="footer">
+                    @Copyright <i>Webpage created by <u>vraj shah</u></i>
+                </div>
         </main>
-        <script src="index.js"></script>
+        <script src="js/index.js"></script>
     </body>
 
 </html>
