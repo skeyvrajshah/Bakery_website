@@ -24,10 +24,10 @@
                 <div class="navbar">
                     <a href="#protfolio">Home</a>
                     <a href="#teammember">Team Member</a>
-                    <div class="dropdown">
-                        <button class="dropbtn" onclick="dropbutton()">Blog  <i class="fa fa-caret-down"></i>
+                    <div class="dropdown" >
+                        <button class="dropbtn" onclick="dropbutton()" onblur="document.querySelector('#myDropdown').classList.remove('show')">Blog  <i class="fa fa-caret-down"></i>
                         </button>
-                        <div class="dropdown-content" id="myDropdown">
+                        <div class="dropdown-content" id="myDropdown" >
                             <a href="blog.html">Create blog</a>
                         </div>
                     </div>
@@ -87,13 +87,15 @@
             </section>
             <section class="blog" id="blog">
                 <h1 style="text-align:center;background-color: #4a90e2;">Blog</h1>
-                 <input type="text" id="search-inp" placeholder="Search Blog">
-                <button id="search-button">Search</button>
+                <!-- <div class="searchandbtn"> -->
+                    <input type="text" id="search-inp" placeholder="Search Blog">
+                    <button id="search-button">Search</button>
+                <!-- </div> -->
                 <ul id="posts">
                     <div class="row">
                         <li class="post">
                             <div class="card">
-                                <img src="img/bread2.jpg" alt="bread"
+                                <img src="img/blog.jpg" alt="bread"
                                     style="width:100%;">
                                 <p id="search">A bread proofing basket forms an
                                     integral
@@ -242,18 +244,21 @@
                         <dl>
                             <button class="accordion-header">Service 1</button>
                             <dd class="accordion-content">
-                            <h3>Puff</h3>
+                            <!-- <h3>Puff</h3> -->
+                            <h2 style="color:rgb(10, 12, 10);font-family: Verdana, Geneva, Tahoma, sans-serif;">Puff</h2>
                             <img src="img/1_1.jpg" alt="puff">
                             </dd>
                             <button class="accordion-header">Service 2</button>
                             <dd class="accordion-content">
-                            <h3>Bread</h3>
+                            <!-- <h3>Bread</h3> -->
+                            <h2 style="color:rgb(10, 12, 10); font-family: Verdana, Geneva, Tahoma, sans-serif;">Bread</h2>
                             <img src="img/bread2.jpg" alt="bread">
                             </dd>
                             <button class="accordion-header">Service 3</button>
                             <dd class="accordion-content">
-                            <h3>Donuts</h3>
-                            <img src="img/donuts2.jpg" alt="Donuts">
+                            <h2 style="color:rgb(10, 12, 10);font-family: Verdana, Geneva, Tahoma, sans-serif;">Donuts</h2>
+                            <!-- <h3>Donuts</h3> -->
+                            <img src="img/donuts3.jpg" alt="Donuts">
                             </dd>
                         </dl>
             </section>
@@ -369,7 +374,7 @@
                 </div>
             </section>
 
-            <section id="FAQ">
+            <!-- <section id="FAQ">
                 <h1 style="text-align:center;background-color: #4a90e2;">FAQ</h1>
             <div>
                 <button class="accordion-header">Puff Avaible Time ?</button>
@@ -403,6 +408,35 @@
                 <p style="border-style: outset">Answer :- Yes we make egeless Cakes</p>
                 </div>
               </div>
+            </section> -->
+            <section id="FAQ">
+                <h1 style="text-align:center;background-color: #4a90e2;">FAQ</h1>
+                <div class="layout">
+                    <div class="accordion">
+                        <div class="accordion__question">
+                            <p>Shop Opening and Closing Time ?</p>
+                        </div>
+                        <div class="accordion__answer">
+                            <p>We Are open to 7Am to 10PM</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion__question">
+                            <p>Puff Avaible Time ?</p>
+                        </div>
+                        <div class="accordion__answer">
+                            <p>Puff Avaiable time 8Am to 6PM</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion__question">
+                            <p>Do you make Egeless cakes ?</p>
+                        </div>
+                        <div class="accordion__answer">
+                            <p>Yes we make egeless Cakes</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
 

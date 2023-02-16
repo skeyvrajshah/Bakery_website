@@ -4,14 +4,14 @@ function dropbutton() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
 
-window.onclick = function(e) {
-  if (!e.target.matches('.dropbtn')) {
-  var myDropdown = document.getElementById("myDropdown");
-    if (myDropdown.classList.contains('show')) {
-      myDropdown.classList.remove('show');
-    }
-  }
-}
+// window.onclick = function(e) {
+//   if (!e.target.matches('.dropbtn')) {
+//   var myDropdown = document.getElementById("myDropdown");
+//     if (myDropdown.classList.contains('show')) {
+//       myDropdown.classList.remove('show');
+//     }
+//   }
+// }
 
 //  testi slider
 var slideIndex = 1;
@@ -167,6 +167,7 @@ searchButton.addEventListener('click', function() {
 
 
 //Accordion
+// ---------------------------------------------------------------------------------------------------
 const headers = document.querySelectorAll('.accordion-header');
 
 headers.forEach(header => {
@@ -180,6 +181,25 @@ headers.forEach(header => {
     }
   });
 });
+
+// -------------------------------------------------------------------------------------------------
+//updated code
+// -------------------------------------------------------------------------------------------------
+let answers=document.querySelectorAll(".accordion");
+answers.forEach((event)=>{
+    event.addEventListener('click',()=>{
+        if(event.classList.contains("active")){
+                event.classList.remove("active");
+        }
+        else{
+            event.classList.add("active");
+        }
+    })
+})
+
+
+
+
 
 //topbtn
 let mybutton = document.getElementById("topbtn");
